@@ -1,37 +1,11 @@
-<img align="right" src="https://i.imgur.com/qI1Jfyl.gif" width="55%"/>
+# Trajectory Optimization for Drifting Motions of Wheeled-Legged Robots
 
-[<img src="https://i.imgur.com/qliQVx1.png" />](https://awinkler.github.io/publications/mypdfs/18-ral-winkler.pdf "Open RA-L paper")
+This work is based on towr (a trajectory optimizer for walking robots ([paper](https://ieeexplore.ieee.org/document/8283570/))), that was extended in order to perform drifting motions with wheeled-legged robots.
 
-*A light-weight and extensible C++ library for trajectory optimization for legged robots.*
+## Drifting motions
 
-[![Build Status](http://build.ros.org/buildStatus/icon?job=Kdev__towr__ubuntu_xenial_amd64)](http://build.ros.org/view/Kdev/job/Kdev__towr__ubuntu_xenial_amd64/)
-[![Documentation](https://img.shields.io/badge/docs-generated-brightgreen.svg)](http://docs.ros.org/kinetic/api/towr/html/)
-[![ROS hosting](https://img.shields.io/badge/ROS-integration-blue.svg)](http://wiki.ros.org/towr)
-![](https://tokei.rs/b1/github/ethz-adrl/towr)
-[![CodeFactor](https://www.codefactor.io/repository/github/ethz-adrl/towr/badge)](https://www.codefactor.io/repository/github/ethz-adrl/towr)
-[![License BSD-3-Clause](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg)](https://tldrlegal.com/license/bsd-3-clause-license-%28revised%29#fulltext)
+<img src="demo/driftingDemo.gif" />
 
-A base-set of variables, costs and constraints that can be combined and extended to formulate trajectory optimization problems for legged systems. These implementations have been used to generate a variety of motions such as monoped hopping, biped walking, or a complete quadruped trotting cycle, while optimizing over the gait and step durations in less than 100ms ([paper](https://ieeexplore.ieee.org/document/8283570/)).  
-
-Features:  
-:heavy_check_mark: Inuitive and efficient formulation of variables, cost and constraints using [Eigen].   
-:heavy_check_mark: [ifopt] enables using the high-performance solvers [Ipopt] and [Snopt].  
-:heavy_check_mark: Elegant rviz visualization of motion plans using [xpp].  
-:heavy_check_mark: [ROS]/[catkin] integration (optional).  
-:heavy_check_mark: Light-weight ([~6k lines](https://i.imgur.com/gP3gv34.png) of code) makes it easy to use and extend.  
-
-<br>
-
-<p align="center">
-  <a href="#install">Install</a> •
-  <a href="#run">Run</a> •
-  <a href="#develop">Develop</a> •
-  <a href="#contribute">Contribute</a> •
-  <a href="#publications">Publications</a> •
-  <a href="#authors">Authors</a>
-</p>
-
-[<img src="https://i.imgur.com/8M4v4aP.gif" />](https://youtu.be/0jE46GqzxMM "Show more examples on Youtube")
 
 ## Install
 The easiest way to install is through the [ROS binaries](http://wiki.ros.org/towr):
@@ -121,6 +95,44 @@ We provide a [ROS]-wrapper for the pure cmake towr library, which adds a keyboar
  * The relevant classes and parameters to build on are collected [modules](http://docs.ros.org/api/towr/html/modules.html).
  * A nice graphical overview as UML can be seen [here](http://docs.ros.org/api/towr/html/inherits.html).
  * The [doxygen documentation](http://docs.ros.org/api/towr/html/) provides helpul information for developers.
+
+# TOWR
+
+<img align="right" src="https://i.imgur.com/qI1Jfyl.gif" width="55%"/>
+
+[<img src="https://i.imgur.com/qliQVx1.png" />](https://awinkler.github.io/publications/mypdfs/18-ral-winkler.pdf "Open RA-L paper")
+
+*A light-weight and extensible C++ library for trajectory optimization for legged robots.*
+
+[![Build Status](http://build.ros.org/buildStatus/icon?job=Kdev__towr__ubuntu_xenial_amd64)](http://build.ros.org/view/Kdev/job/Kdev__towr__ubuntu_xenial_amd64/)
+[![Documentation](https://img.shields.io/badge/docs-generated-brightgreen.svg)](http://docs.ros.org/kinetic/api/towr/html/)
+[![ROS hosting](https://img.shields.io/badge/ROS-integration-blue.svg)](http://wiki.ros.org/towr)
+![](https://tokei.rs/b1/github/ethz-adrl/towr)
+[![CodeFactor](https://www.codefactor.io/repository/github/ethz-adrl/towr/badge)](https://www.codefactor.io/repository/github/ethz-adrl/towr)
+[![License BSD-3-Clause](https://img.shields.io/badge/license-BSD--3--Clause-blue.svg)](https://tldrlegal.com/license/bsd-3-clause-license-%28revised%29#fulltext)
+
+A base-set of variables, costs and constraints that can be combined and extended to formulate trajectory optimization problems for legged systems. These implementations have been used to generate a variety of motions such as monoped hopping, biped walking, or a complete quadruped trotting cycle, while optimizing over the gait and step durations in less than 100ms ([paper](https://ieeexplore.ieee.org/document/8283570/)).  
+
+Features:  
+:heavy_check_mark: Inuitive and efficient formulation of variables, cost and constraints using [Eigen].   
+:heavy_check_mark: [ifopt] enables using the high-performance solvers [Ipopt] and [Snopt].  
+:heavy_check_mark: Elegant rviz visualization of motion plans using [xpp].  
+:heavy_check_mark: [ROS]/[catkin] integration (optional).  
+:heavy_check_mark: Light-weight ([~6k lines](https://i.imgur.com/gP3gv34.png) of code) makes it easy to use and extend.  
+
+<br>
+
+<p align="center">
+  <a href="#install">Install</a> •
+  <a href="#run">Run</a> •
+  <a href="#develop">Develop</a> •
+  <a href="#contribute">Contribute</a> •
+  <a href="#publications">Publications</a> •
+  <a href="#authors">Authors</a>
+</p>
+
+[<img src="https://i.imgur.com/8M4v4aP.gif" />](https://youtu.be/0jE46GqzxMM "Show more examples on Youtube")
+
 
 #### Problem formulation
  * This code formulates the variables, costs and constraints using ifopt, so it makes sense to briefly familiarize with the syntax using [this example].
