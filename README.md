@@ -1,10 +1,10 @@
-# Trajectory Optimization for Drifting Motions of Wheeled-Legged Robots
+# Trajectory Optimization of Drifting Motions of Wheeled-Legged Robots
 
 This work is based on towr (a trajectory optimizer for walking robots ([paper](https://ieeexplore.ieee.org/document/8283570/))), that was extended in order to perform drifting motions with wheeled-legged robots.
 
-## Drifting motions
+## Generated Drifting Motion Example
 
-<img src="demo/driftingDemo.gif" />
+<img src="demo/driftingDemoCropped.gif" />
 
 
 ## Install
